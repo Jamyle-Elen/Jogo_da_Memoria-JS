@@ -81,7 +81,7 @@ body {
     justify-items: center;
     color: var(--button-color);
     font-size: 3em;
-    transform: rotateY('180deg');
+    transform: rotateY(180deg);
     transition: .25s;
 }
 
@@ -91,6 +91,15 @@ body {
     inset: 0;
     background: rgb(160, 137, 137);
     transition: .3s;
-    transform: rotateY('0deg');
+    transform: rotateY(0deg);
     backface-visibility: hidden;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
 }

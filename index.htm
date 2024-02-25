@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
     <title>JOGO DA MEMORIA</title>
 </head>
 <body>
@@ -15,6 +16,13 @@
         <button id="reset" onclick="window.location.reload()">RESET GAME</button>
     </div>
 
+    <div class="modal" id="victoryModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Parabéns! Você venceu!</p>
+            <button id="reset" onclick="window.location.reload()">Jogar Novamente</button>
+        </div>
+    </div>
     <script src="src/scripts/engine.js"></script>
 </body>
 </html>

@@ -28,7 +28,6 @@ for (let i = 0; i < icons.length; i++) {
     box.innerHTML = shuffleIcons[i];
     box.onclick = handleClick;
     document.querySelector(".game").appendChild(box);
-    
 }
 
 function handleClick() {
@@ -44,11 +43,25 @@ function handleClick() {
 function checkMatch() {
     const [card1, card2] = openCards;
     if (card1.innerHTML === card2.innerHTML) {
-        card1.classList.add("boxMatch");
-        card2.classList.add("boxMatch");
+        card1.classList.add('boxMatch');
+        card2.classList.add('boxMatch');
+        openCards = [];
+        if (document.querySelectorAll('.boxMatch').length === icons.length) {
+            openModal();
+        }
     } else {
-        card1.classList.remove("boxOpen");
-        card2.classList.remove("boxOpen");
+        setTimeout(() => {
+            card1.classList.remove('boxOpen');
+            card2.classList.remove('boxOpen');
+            openCards = [];
+        }, 500);
     }
-    openCards = [];
+}
+
+function openModal() {
+    document.getElementById('victoryModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('victoryModal').style.display = 'none';
 }

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+/* font {
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+:root {
+    --container-color: #e2e0e0;
+    --button-color: #b6b3b3;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--container-color);
+    padding: 40px 60px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container h2 {
+    font-size: 2em;
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1em;
+}
+
+#reset {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    transition: transform .3s ease-in-out;
+    border: none;
+    font-weight: 600;
+    letter-spacing: .1em;
+    cursor: pointer;
+}
+
+#reset:hover {
+    transform: scale(1.1);
+}
+
+#reset:focus {
+    background-color: var(--button-color);
+}
+
+.game {
+    border: 1px solid red;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: var(--button-color);
+}

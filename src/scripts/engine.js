@@ -45,7 +45,7 @@ function handleClick() {
 
 function checkMatch() {
     const [card1, card2] = openCards;
-    if (card1.innerHTML === card2.innerHTML) {
+    if (card1 && card2 && card1.innerHTML === card2.innerHTML) {
         card1.classList.add('boxMatch');
         card2.classList.add('boxMatch');
         openCards = [];

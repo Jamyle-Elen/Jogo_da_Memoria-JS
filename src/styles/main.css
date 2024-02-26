@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 
-/* font {
-    font-family: "Barriecito", system-ui;
-    font-weight: 400;
-    font-style: normal;
-} */
-
 :root {
     --container-color: #e2e0e0;
     --button-color: #b6b3b3;
+    --bgItem-color: #a08989;
+    --bgModal-color: #fefefe;
+    --modal-color: #aaa;
+    --border-color: #888;
+    --focus-color: #000;
+
+
 }
 
 body {
@@ -83,14 +84,14 @@ body {
     font-size: 3em;
     transform: rotateY(180deg);
     transition: .25s;
-    border: #888 solid;
+    border: var(--border-color) solid;
 }
 
 .item::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgb(160, 137, 137);
+    background: var(--bgItem-color);
     transition: .3s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
@@ -114,20 +115,20 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--focus-color);
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--bgModal-color);
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid var(--border-color);
     width: 80%;
     text-align: center;
 }
 
 .close {
-    color: #aaa;
+    color: var(--modal-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -135,7 +136,7 @@ body {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--focus-color);
     text-decoration: none;
     cursor: pointer;
 }

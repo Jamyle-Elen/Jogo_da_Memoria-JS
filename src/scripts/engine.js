@@ -19,6 +19,7 @@ const icons = [
 ];
 
 let openCards = [];
+let attempts = 0;
 
 let shuffleIcons = icons.sort(() => (Math.random() > 0.5 ? 2 : -1));
 
@@ -36,6 +37,8 @@ function handleClick() {
         openCards.push(this);
     }
     if (openCards.length === 2) {
+        attempts++;
+        document.getElementById('attempts').innerText = `Tentativas: ${attempts}`
         setTimeout(checkMatch, 500);
     }    
 }
